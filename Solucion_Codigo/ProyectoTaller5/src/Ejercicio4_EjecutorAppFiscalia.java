@@ -1,8 +1,10 @@
+
 import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class Ejercicio4_EjecutorAppFiscalia {
+
     public static void main(String[] args) {
         CasoCorrupcion[] casos = new CasoCorrupcion[2];
 
@@ -19,10 +21,10 @@ public class Ejercicio4_EjecutorAppFiscalia {
             System.out.println(caso);
 
             for (Persona p : caso.implicados) {
-                if (p != null && p.nivelImplicacion.equalsIgnoreCase("Acusado")) {
+                if (p.nivelImplicacion.equalsIgnoreCase("Acusado")) {
                     System.out.println(p.nombre);
                     System.out.println("- ¿Reducción de pena?: " + p.reduccionDePena());
-                    System.out.println("- ¿Puede pagar fianza?: " + p.pagarFianza(caso.danoEconomico));
+                    System.out.println("- ¿Puede pagar fianza?: " + p.pagarFianza(caso.danoEconomico) + "- Fianza total: " + p.fianza);
                 }
             }
             System.out.println();
@@ -31,11 +33,12 @@ public class Ejercicio4_EjecutorAppFiscalia {
 }
 
 class CasoCorrupcion {
+
     public String nombreCaso;
     public Date fechaInicio;
     public String estado;
     public double danoEconomico;
-    public Persona[] implicados = new Persona [2];
+    public Persona[] implicados = new Persona[2];
     public int cantidadImplicados = 0;
 
     public CasoCorrupcion(String nombreCaso, Date fechaInicio, String estado, double danoEconomico) {
@@ -43,7 +46,7 @@ class CasoCorrupcion {
         this.fechaInicio = fechaInicio;
         this.estado = estado;
         this.danoEconomico = danoEconomico;
-        
+
     }
 
     public void agregarPersona(Persona persona) {
@@ -61,23 +64,23 @@ class CasoCorrupcion {
         } else if (diasTranscurridos > 7) {
             estado = "Alerta";
         }
-    }  
+    }
 
     @Override
     public String toString() {
         return "CasoCorrupcion{" + "nombreCaso=" + nombreCaso + ", fechaInicio=" + fechaInicio + ", estado=" + estado + ", danoEconomico=" + danoEconomico + ", implicados=" + Arrays.toString(implicados) + ", cantidadImplicados=" + cantidadImplicados + '}';
     }
-
-   
 }
 
 class Persona {
+
     public String nombre;
     public int edad;
     public String ocupacion;
     public String nivelImplicacion;
     public int sentencia;
     public boolean colabora;
+    public double fianza;
 
     public Persona(String nombre, int edad, String ocupacion, String nivelImplicacion, int sentencia, boolean colabora) {
         this.nombre = nombre;
@@ -93,18 +96,23 @@ class Persona {
     }
 
     public boolean pagarFianza(double danoEconomico) {
-        return "Acusado".equalsIgnoreCase(nivelImplicacion) &&
-               sentencia < 1 &&
-               colabora &&
-               (danoEconomico * 0.5 > 0);
+        boolean puedePagar = "Acusado".equalsIgnoreCase(nivelImplicacion)
+                && sentencia < 1
+                && colabora
+                && (danoEconomico * 0.5 > 0);
+
+        if (puedePagar) {
+            this.fianza = danoEconomico * 0.5;
+        } else {
+            this.fianza = 0; 
+        }
+
+        return puedePagar;
     }
-
-
 
     @Override
     public String toString() {
         return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", ocupacion=" + ocupacion + ", nivelImplicacion=" + nivelImplicacion + ", sentencia=" + sentencia + ", colabora=" + colabora + '}';
     }
 
-    
 }
