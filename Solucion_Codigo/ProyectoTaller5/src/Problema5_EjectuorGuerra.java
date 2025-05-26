@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class Ejercicio5_EjectuorGuerra {
+public class Problema5_EjectuorGuerra {
 
     public static void main(String[] args) {
         Random rand = new Random();

@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class Ejercicio4_EjecutorAppFiscalia {
+public class Problema4_EjecutorAppFiscalia {
 
     public static void main(String[] args) {
         CasoCorrupcion[] casos = new CasoCorrupcion[2];

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Ejercicio1_EjecutorSistemVentas {
+public class Problema1_EjecutorSistemVentas {
 
     public static Scanner sc = new Scanner(System.in);
     public static Producto inventario[];

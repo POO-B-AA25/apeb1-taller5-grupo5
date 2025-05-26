@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Ejercicio3_EjecutorCategorizacionDepartamentos {
+public class Problema3_EjecutorCategorizacionDepartamentos {
 
     public static Scanner sc = new Scanner(System.in);
 

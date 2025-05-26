@@ -1,4 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/jbCb_f0P)
 # Taller 5 - Estructuras estáticas/dinámicas _(arreglos de objetos)_
 
 ## Diseño orientado a objetos _(DOO)_ aplicando estructuras de datos estáticas/dinámicas 
@@ -93,3 +92,13 @@ La ONU _(Organización de Naciones Unidad)_ se contacta con usted para que desar
 - Para el caso de los eventos que causen el 50% o mas de bajas en alguno de los países involucrados, de igual forma se debe convocar a la ONU con carácter de urgente. 
 
 Relacione las posibles clases modeladas con la asociación correcta. No olvide que un conflicto internacional puede tener múltiples eventos asociados, y un evento puede estar relacionado con un único conflicto internacional. Este diseño permite gestionar de manera eficiente la información sobre los conflictos internacionales y los eventos relacionados en el mundo actual.
+
+## Problema 6: Sistema gestor deportivo
+
+Durante un evento deportivo universitario, se requiere desarrollar una aplicación que permita registrar y gestionar las actividades y resultados de los participantes en distintas disciplinas. La aplicación debe permitir el ingreso de datos, control de asistencia, registro de puntajes obtenidos en cada prueba y cálculo de resultados finales. Se desea también que el sistema emita reportes con estadísticas como el promedio de rendimiento, el número de pruebas superadas y los participantes destacados por disciplina.
+
+El sistema debe ser construido aplicando los principios de la Programación Orientada a Objetos, haciendo uso de estructuras de control selectivas, repetitivas y estructuras de datos estáticas o dinámicas según el criterio del estudiante.
+
+## Problema 7: Sistema gestor de la feria gastronómica
+
+Con motivo del próximo Festival Gastronómico Intercultural, los organizadores han solicitado el desarrollo de una aplicación que permita gestionar la participación de distintos expositores que ofrecerán platos típicos. La aplicación debe permitir registrar a cada expositor, los platos que ofrece, los ingredientes utilizados, así como controlar la disponibilidad de cada plato durante el evento. Además, se debe permitir registrar la cantidad de platos vendidos, calcular ingresos generados por stand y generar reportes que ayuden a visualizar cuáles fueron los platos más vendidos y qué stands tuvieron mayor movimiento.

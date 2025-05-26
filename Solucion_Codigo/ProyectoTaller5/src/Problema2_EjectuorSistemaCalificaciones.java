@@ -2,7 +2,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Ejercicio2_EjectuorSistemaCalificaciones {
+public class Problema2_EjectuorSistemaCalificaciones {
 
     public static Scanner sc = new Scanner(System.in);
 
