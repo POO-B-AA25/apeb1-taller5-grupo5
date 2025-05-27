@@ -93,12 +93,12 @@ public class Problema7_EjecutorSistemaFeria {
 class Plato {
 
     public String nombre;
-    public List<String> ingredientes;
+    public ArrayList<String> ingredientes;
     public double precio;
     public int disponibles;
     public int vendidos;
 
-    public Plato(String nombre, List<String> ingredientes, double precio, int disponibles) {
+    public Plato(String nombre, ArrayList<String> ingredientes, double precio, int disponibles) {
         this.nombre = nombre;
         this.ingredientes = ingredientes;
         this.precio = precio;
