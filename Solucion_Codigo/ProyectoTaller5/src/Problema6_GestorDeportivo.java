@@ -4,7 +4,7 @@ package gestordeportivo;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class GestorDeportivo {
+public class Problema6_GestorDeportivo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         EventoDeportivo evento = new EventoDeportivo();

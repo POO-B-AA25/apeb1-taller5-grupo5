@@ -29,7 +29,7 @@ public class Problema7_EjecutorSistemaFeria {
                 String ingrediente2 = ingredientes2[random.nextInt(ingredientes2.length)];
                 String ingrediente3 = ingredientes3[random.nextInt(ingredientes3.length)];
 
-                List<String> ingredientes = new ArrayList<>();
+                ArrayList<String> ingredientes = new ArrayList<>();
                 ingredientes.add(ingrediente1);
                 ingredientes.add(ingrediente2);
                 ingredientes.add(ingrediente3);
